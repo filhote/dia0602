@@ -1,0 +1,8 @@
+/* Empty. Add your own CSS if you like */
+.list:last-child.card{
+    margin-bottom: 20px;
+}
+
+.nome-filho {
+    text-align: center;
+}

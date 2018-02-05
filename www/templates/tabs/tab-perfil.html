@@ -1,0 +1,29 @@
+<ion-view view-title="{{user.nome}}">
+    <ion-content class="padding">
+
+      <button ng-click="voltarDash()">voltar</button>
+
+        <div class="list card">
+
+            <div class="item item-avatar">
+              <img src={{user.imagem}}>
+              <h2>{{user.nome}}</h2>
+              <p>{{user.nascimento}}</p>
+              <p>{{user.sexo}}</p>
+            </div>
+          
+            <div class="button-bar">
+              <a class="button">Geral</a>
+              <a class="button">Fotos</a>
+              <a class="button">filhos</a>
+              
+            </div>
+          
+          </div>
+
+    <p> Timeline
+    </p>
+
+    </ion-content>
+  </ion-view>
+  

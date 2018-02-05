@@ -1,0 +1,42 @@
+<ion-view view-title="Inicio">
+  <ion-content class="padding">
+    <h2>Olá, {{user.name}}</h2>
+    <p>{{ hoje }}</p>
+
+    <ion-scroll direction="x" style="overflow: scroll; white-space: nowrap;" item-height="400px">
+      <div class="list card" ng-repeat="filho in filhos" style="display: inline-block; height: 400px; margin-right: 10px;" ng-click="selecionarPerfil(filho)">
+        <div class="item item-image" style="height: 300px; width: 300px">
+          <img src="{{filho.imagem}}">
+        </div>
+
+
+        <h3 class="nome-filho">
+            {{filho.nome}}
+        </h3>
+        <h5 class="nome-filho">
+          {{filho.nascimento}}
+        </h5>
+            
+
+      </div>
+    </ion-scroll>
+
+    <div class="list">
+      <div class="item item-divider">
+        Atividade recente
+      </div>
+      <a class="item" href="#">
+        item
+      </a>
+    </div>
+
+    <div class="item item-divider">
+      Lembretes
+    </div>
+
+    <a class="item" href="#">
+      Alarme e agenda
+    </a>
+
+  </ion-content>
+</ion-view>

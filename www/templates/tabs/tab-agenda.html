@@ -1,0 +1,52 @@
+<ion-view view-title="Dashboard">
+  <ion-content class="padding">
+    <h2>Agenda</h2>
+
+    <button class="button button-block button-positive" ng-hide="criacao" ng-click="abrirCriador()">
+        Adicionar tarefa
+      </button>
+
+    <div class="list" ng-show="criacao">
+            <label class="item item-input item-select">
+              <div class="input-label">
+                Filho
+              </div>
+              <select>
+                <option>lista fihos</option>
+                <option>Green</option>
+                <option>Red</option>
+              </select>
+            </label>
+        <label class="item item-input">
+          <input type="text" placeholder="Tarefa">
+        </label>
+        <label class="item item-input">
+          <input type="text" placeholder="Data">
+        </label>
+        <label class="item item-input">
+            <input type="text" placeholder="Hora">
+          </label>
+        <label class="item item-input">
+          <textarea placeholder="Detalhes"></textarea>
+        </label>
+        <button class="button button-block button-positive">
+          Agendar
+        </button>
+      </div>
+    <ion-item ng-repeat="compromisso in compromissos" on-touch="itemClicked({{compromisso.id}})">
+      <label>{{compromisso.titulo}}</label>
+      <label style="color: grey">{{compromisso.hora}}</label>
+      <label style="color: grey">{{compromisso.dia}}</label>
+      <button style="float: right; height: 20px; width: 20px; color:white; background-color: gray;" on-touch="itemRemove({{compromisso.id}})">-</button>
+    </ion-item>
+    <ion-item on-touch="itemClicked(0)">
+      Adicionar
+    </ion-item>
+
+    <ion-list>
+      Lista clicavel
+      <ion-radio ng-model="choice" ng-value="'A'">mariana medico</ion-radio>
+      <ion-radio ng-model="choice" ng-value="'B'">lucas piano</ion-radio>
+    </ion-list>
+  </ion-content>
+</ion-view>
